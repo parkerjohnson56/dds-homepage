@@ -47,30 +47,8 @@ export default function SEOReport() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Header */}
-      <motion.header 
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        transition={{ type: "spring", stiffness: 100 }}
-        className="w-full bg-white shadow-sm z-50"
-      >
-        <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex py-4 justify-between items-center">
-            <motion.div 
-              whileHover={{ scale: 1.05 }}
-              transition={{ type: "spring", stiffness: 400 }}
-              className="flex-shrink-0"
-            >
-              <Link href="/">
-                <img className="h-20 w-auto" src="/assets/dds-logo.png" alt="Domain Driven Solutions" />
-              </Link>
-            </motion.div>
-          </div>
-        </nav>
-      </motion.header>
-
       {/* Hero Section */}
-      <main className="pb-16">
+      <main className="pb-16 pt-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8 py-24">
           <div className="lg:flex lg:items-center lg:gap-x-16 lg:justify-between">
             <motion.div 
@@ -333,12 +311,7 @@ export default function SEOReport() {
       </main>
 
       {/* Footer */}
-      <motion.footer 
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        className="bg-gray-900"
-      >
+      <footer className="bg-black">
         <div className="mx-auto max-w-7xl px-6 py-8 md:flex md:items-center md:justify-between lg:px-8">
           <div className="flex justify-center space-x-6 md:order-2">
             <Link href="/" className="text-sm leading-6 text-gray-300 hover:text-white">Home</Link>
@@ -349,7 +322,7 @@ export default function SEOReport() {
             </p>
           </div>
         </div>
-      </motion.footer>
+      </footer>
 
       {/* Modal with animation */}
       <Dialog
@@ -364,8 +337,9 @@ export default function SEOReport() {
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.9 }}
             transition={{ type: "spring", duration: 0.5 }}
+            className="w-full"
           >
-            <Dialog.Panel className="mx-auto max-w-sm rounded-lg bg-white p-6 shadow-xl">
+            <Dialog.Panel className="mx-auto w-full max-w-sm sm:max-w-xl md:max-w-2xl lg:max-w-4xl rounded-lg bg-white p-6 sm:p-8 shadow-xl">
               <Dialog.Title className="text-lg font-medium leading-6 text-gray-900">
                 Get Your Free SEO Report
               </Dialog.Title>

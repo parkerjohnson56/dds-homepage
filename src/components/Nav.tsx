@@ -25,7 +25,7 @@ export default function Nav() {
             </div>
             <Link 
               href="/seo-report"
-              className={`bg-white text-gray-900 border-2 border-brand-red px-5 py-2 rounded-full text-sm font-semibold hover:bg-red-50 transition-colors ${karla.className}`}
+              className={`bg-white text-gray-900 border-2 border-red-700 px-5 py-2 rounded-full text-sm font-semibold hover:bg-red-50 transition-colors ${karla.className}`}
             >
               Free SEO Report
             </Link>

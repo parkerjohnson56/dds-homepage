@@ -237,7 +237,7 @@ export default function Home() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="bg-gray-900 py-24 sm:py-32"
+          className="bg-black py-24 sm:py-32"
         >
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <motion.div 
@@ -393,8 +393,9 @@ export default function Home() {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
               transition={{ type: "spring", duration: 0.5 }}
+              className="w-full"
             >
-              <Dialog.Panel className="mx-auto max-w-sm rounded-lg bg-white p-6 shadow-xl">
+              <Dialog.Panel className="mx-auto w-full max-w-sm sm:max-w-xl md:max-w-2xl lg:max-w-4xl rounded-lg bg-white p-6 sm:p-8 shadow-xl">
                 <Dialog.Title className={`text-lg font-medium leading-6 text-gray-900 ${karla.className}`}>
                   Contact Us
                 </Dialog.Title>
@@ -502,7 +503,7 @@ export default function Home() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-gray-900">
+      <footer className="bg-black">
         <div className="mx-auto max-w-7xl px-6 py-8 md:flex md:items-center md:justify-between lg:px-8">
           <div className="flex justify-center space-x-6 md:order-2">
             <a href="#" className="text-sm leading-6 text-gray-300 hover:text-white">Services</a>
